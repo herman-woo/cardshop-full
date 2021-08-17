@@ -1,0 +1,10 @@
+.confirm{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.confirm-container{
+    margin-top: 150px;
+}

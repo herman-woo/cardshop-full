@@ -1,0 +1,14 @@
+.location{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.location-header{
+    margin-top: 50px;
+    width: 1000px;
+}
+iframe{
+    margin-top: 50px;
+}

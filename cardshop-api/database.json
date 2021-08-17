@@ -1,0 +1,17 @@
+{
+    "dev": {
+      "driver": "pg",
+      "host": "database-1.cyjmvjkr68lj.us-east-1.rds.amazonaws.com",
+      "database": "card_shop_db",
+      "user": "postgres",
+      "password": "postgres"
+    },
+    "test": {
+      "driver": "pg",
+      "host": "database-1.cyjmvjkr68lj.us-east-1.rds.amazonaws.com",
+      "database": "card_shop_test_db",
+      "user": "postgres",
+      "password": "postgres"
+    }
+  }
+  

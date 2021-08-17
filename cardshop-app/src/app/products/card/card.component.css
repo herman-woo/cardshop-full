@@ -1,0 +1,47 @@
+
+button{
+    background-color: rgb(59, 134, 233);
+    color: white
+}
+.card-container{
+    background-image: url();
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.card-dash{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.card-input{
+    width: 50px;
+}
+.card-name{
+    text-align: center;
+    width: 100%;
+    color: white;
+    background-color: rgba(128, 128, 128, 0.616);
+}
+
+.card-order{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.card-spacer{
+    visibility: hidden;
+}
+.card-price{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.801);
+}

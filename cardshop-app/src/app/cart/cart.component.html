@@ -1,0 +1,15 @@
+<div class="cart">
+    
+    <div class="cart-container">
+        <h1>Shopping Cart:</h1>
+        <div class="cart-item-container">
+            <app-cart-item *ngFor="let item of items" [item]="item" (removeOrder)="removeOrder($event)" (updateCost)="updateCost()"></app-cart-item>
+        </div>
+        <div *ngIf="total === 0"><h4 class="cart-empty">No Items in Cart</h4></div>       
+        <div class="cart-checkout" *ngIf="total>0">
+            <h3 class="cart-total">Total: ${{total}}.00</h3>
+            <button class="cart-checkout-button" routerLink="/cart/checkout">Proceed to Checkout</button>            
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="confirm">
+    <div class="confirm-container" *ngIf="userTotal === 0">
+        <h5>No Order has been placed</h5>
+    </div>
+    <div class="confirm-container" *ngIf="userTotal > 0">
+        <h5>Thank you {{userFirstName}}!</h5>
+        <p>Your order of <strong>${{userTotal}}.00</strong> has been confirmed</p>
+        <p>An invoice will be sent to your email: <em>{{userEmail}}</em></p>
+    </div>
+</div>
+

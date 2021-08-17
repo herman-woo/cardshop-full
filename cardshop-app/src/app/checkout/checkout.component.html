@@ -1,0 +1,28 @@
+<div class="checkout">
+    <div class="checkout-container">
+        <h1 class="checkout-header">Checkout:</h1>
+        <div class="checkout-body">
+            <div class="checkout-body-order-summary">
+                <h5>Order Info:</h5>
+                <div *ngIf="total === 0">
+                    <p>No Orders in Cart</p>
+                </div>
+                <div *ngIf="total > 0">
+                    <app-checkout-item *ngFor="let order of orders" [item]="order"></app-checkout-item>
+                    <h5>Total: ${{total}}.00</h5>
+                </div>
+
+            </div>
+            <form #form="ngForm" (ngSubmit)="submitForm()">
+                <h5>User Info:</h5>
+                <div class="checkout-input"><p>First Name: </p><input name="first-name" required type="text" minlength="1" placeholder="John" [(ngModel)]="firstName"></div> 
+                <div class="checkout-input"><p>Last Name: </p><input name="last-name" required type="text" minlength="1" placeholder="Doe" [(ngModel)]="lastName"></div> 
+                <div class="checkout-input"><p>Email: </p><input name="email" type="text" required minlength="1" placeholder="123fake@email.com" [(ngModel)]="email"></div> 
+                <div class="checkout-input"><p>Mailing Address: </p><input name="address" required type="text" minlength="1" placeholder="123 Fake St." [(ngModel)]="address"></div> 
+                <div class="checkout-input"><p>Credit Card </p><input name="credit-card" required type="text" minlength="10" maxlength="10" placeholder="10-digit number" [(ngModel)]="creditCard"></div> 
+                <div *ngIf="total > 0"><input type="submit" value="Submit Order" [disabled]="form.invalid"></div>
+            </form>            
+        </div>
+        
+    </div>
+</div>

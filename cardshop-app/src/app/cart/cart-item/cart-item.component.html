@@ -1,0 +1,20 @@
+<div class="cart-item">
+    <div class="cart-left">
+        <button class="cart-item-remove-button" (click)="removeSelf(item)">remove</button>
+        <div class="cart-item-info">
+            <div>
+                <h5><a routerLink="/product/{{item.product_id}}">{{item.product_name}}</a></h5>
+                <p>${{item.product_price}}.00</p>
+            </div>
+            <div>
+                <p>Quantity: <input name="qty" type="number" value="{{item.order_qty}}" min="0" (click)="updateQty()" [(ngModel)]="newQuantity" ></p>
+            </div>
+
+        </div>   
+    </div>
+    <div class="cart-right">
+        <h5 class="cart-item-cost">Cost: ${{item.order_qty * item.product_price}}.00</h5>
+    </div>    
+</div>
+
+

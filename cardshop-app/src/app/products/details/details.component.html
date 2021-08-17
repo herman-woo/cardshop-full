@@ -1,0 +1,31 @@
+<div class="details">
+    <div class="details-container">
+        
+        <div class="details-image" style="background-image: url({{card[0].img_full}});"></div>
+        <div class="details-main">
+            <div>
+                <h1>
+                    {{card[0].product_name}}
+                </h1>
+                <h2>${{card[0].product_price}}.00</h2>
+            </div>
+            <div class="details-card">
+                <div class="details-card-stats">
+                    <p>Type: <strong>{{card[0].card_type}}</strong></p>
+                    <p>ATK: <strong>{{card[0].card_atk}}</strong></p>
+                    <p>DEF: <strong>{{card[0].card_def}}</strong></p>
+                </div>
+
+                <p>Description: <em>{{card[0].card_description}}</em></p>
+            </div>
+            <form class="details-buttons">
+                <h5>Order:</h5>
+                <input class="card-input" name="details-qty" type="number" value="0" min="0" [(ngModel)]="quantity">
+                <button (click)="addToCart(card[0], card[0].product_name)">Add to Cart</button>
+            </form>
+            <div>
+                <a routerLink="/"><strong>Return to Products</strong></a>
+            </div>
+        </div>
+    </div>
+</div>

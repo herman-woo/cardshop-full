@@ -1,0 +1,13 @@
+<div class="card-container" style="background-image: url({{card.img_thumb}});">
+    <h1 class="card-spacer">See Details</h1>
+    <a class="card-name" routerLink="/product/{{card.id}}">{{card.product_name}}</a>
+    <div class="card-dash">
+        <h5 class="card-price">${{card.product_price}}.00</h5>
+        <form class="card-order">
+            <input class="card-input" name="qty" type="number" value="0" min="0" [(ngModel)]="quantity">
+            <button (click)="addItems(card,card.product_name)">Add</button>
+        </form>
+    </div>    
+</div>
+
+

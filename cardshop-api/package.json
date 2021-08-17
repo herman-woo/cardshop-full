@@ -1,0 +1,52 @@
+{
+  "name": "cardshop-api",
+  "version": "1.0.0",
+  "description": "This API uses a PostgreSQL database, here are the instructions on how to initialize the project once PostgreSQL is installed locally.",
+  "main": "build/server.js",
+  "scripts": {
+    "build": "npx tsc",
+    "dev": "nodemon src/server.ts",
+    "test": "set ENV=test && db-migrate --env test up && jasmine-ts && db-migrate --env test down && db-migrate --env test down && db-migrate --env test down",
+    "refresh-test": "db-migrate --env test down && db-migrate --env test down && db-migrate --env test down && db-migrate --env test down && db-migrate --env test down",
+    "set": "set process.env.ENV=test",
+    "deploy": "eb deploy",
+    "start": "node build/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/herman-woo/cardshop-api.git"
+  },
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/herman-woo/cardshop-api#readme",
+  "dependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/jsonwebtoken": "^8.5.4",
+    "@types/pg": "^8.6.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "db-migrate": "^0.11.12",
+    "db-migrate-pg": "^1.2.2",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^8.6.0"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/jasmine": "^3.8.1",
+    "@types/node": "^16.3.2",
+    "jasmine": "^3.8.0",
+    "jasmine-spec-reporter": "^7.0.0",
+    "jasmine-ts": "^0.4.0",
+    "nodemon": "^2.0.12",
+    "ts-node": "^10.1.0",
+    "tsc-watch": "^4.4.0",
+    "typescript": "^4.3.5"
+  }
+}
