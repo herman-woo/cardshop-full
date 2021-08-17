@@ -1,1 +1,1 @@
-aws s3 cp --recursive --acl public-read ./dist/storefront-app s3://hermanwoo-contacts/
+aws s3 cp --recursive --acl public-read ./dist/storefront-app s3://hermanwoo-cardshop/
