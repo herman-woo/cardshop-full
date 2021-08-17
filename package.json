@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "frontend:install": "cd cardshop-app && npm install",
+    "frontend:build": "cd cardshop-app && ng build",
+    "frontend:deploy": "cd cardshop-app && npm deploy"
   },
   "repository": {
     "type": "git",
