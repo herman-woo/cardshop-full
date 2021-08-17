@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "frontend:install": "cd cardshop-app && npm install",
+    "frontend:install": "cd cardshop-app && npm install && npm install -g @angular/cli@latest",
     "frontend:build": "cd cardshop-app && ng build",
     "frontend:deploy": "cd cardshop-app && npm deploy"
   },
