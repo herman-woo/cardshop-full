@@ -1,7 +1,8 @@
 import express from 'express'
 import { Order, OrdersStore } from '../models/orders'
 import jwt, { Secret } from 'jsonwebtoken'
-const secret = process.env.TOKEN_SECRET as Secret
+import { config } from '../config/config'
+const secret = config.token as Secret
 const store = new OrdersStore()
 
 const getOrders = async (req: express.Request, res: express.Response) => {

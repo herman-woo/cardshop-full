@@ -1,9 +1,8 @@
 import Client from "../database";
 import bcrypt from 'bcryptjs'
-import dotenv from 'dotenv'
-dotenv.config()
-const saltRounds = (process.env.SALT_ROUNDS as unknown) as string
-const pepper = (process.env.BCRYPT_PASSWORD as unknown) as string
+import { config } from "../config/config";
+const saltRounds = (config.salt as unknown) as string
+const pepper = (config.bcrypt as unknown) as string
 
 export type User = {
     id:number;

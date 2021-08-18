@@ -2,8 +2,9 @@ import express from 'express'
 import jwt, { Secret } from 'jsonwebtoken'
 import UserStore from '../models/users'
 import { User } from '../models/users'
+import { config } from '../config/config'
 const store = new UserStore()
-const secret = process.env.TOKEN_SECRET as Secret
+const secret = config.token as Secret
 
 const index = async (req: express.Request, res: express.Response) =>{
     try{
