@@ -9,7 +9,7 @@
     "refresh-test": "db-migrate --env test down && db-migrate --env test down && db-migrate --env test down && db-migrate --env test down && db-migrate --env test down",
     "test": "set ENV=test && db-migrate --env test up && jasmine-ts && npm run refresh-test",
     "set": "set process.env.ENV=test",
-    "deploy": "eb deploy && eb setenv POSTGRES_HOST=database-1.cyjmvjkr68lj.us-east-1.rds.amazonaws.com POSTGRES_DB=card_shop_db POSTGRES_TEST_DB=card_shop_test_db POSTGRES_USER=postgres POSTGRES_PASSWORD=postgres BCRYPT_PASSWORD=PepperedPassword SALT_ROUNDS=10 TOKEN_SECRET=udacitysecret ENV=dev",
+    "deploy": "eb deploy",
     "start": "node build/server.js"
   },
   "repository": {
