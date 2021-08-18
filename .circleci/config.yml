@@ -17,6 +17,10 @@ jobs:
       - eb/setup
       # install dependencies in both apps
       - run:
+          name: Set Back-End .env
+          command: |
+            cd cardshop-api && eb setenv NEW_VAR=$TEST_VAR       
+      - run:
           name: Front-End Install
           command: |
             npm run frontend:install
@@ -40,7 +44,3 @@ jobs:
           name: Back-End Deploy
           command: |
             npm run backend:deploy    
-      - run:
-          name: Set Back-End .env
-          command: |
-            eb setenv NEW_VAR=$TEST_VAR 
