@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "frontend:install": "cd cardshop-app && npm install && npm install -g @angular/cli@latest",
+    "backend:install": "cd cardshop-api && npm install",
     "frontend:build": "cd cardshop-app && ng build",
-    "frontend:deploy": "cd cardshop-app && npm run deploy"
+    "backend:build": "cd cardshop-api && npm run build",
+    "frontend:deploy": "cd cardshop-app && npm run deploy",
+    "backend:deploy": "cd cardshop-api && npm run deploy"
   },
   "repository": {
     "type": "git",
