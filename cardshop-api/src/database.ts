@@ -1,26 +1,23 @@
 import { Pool } from 'pg'
-import dotenv from 'dotenv'
-dotenv.config()
-
-const { ENV } = process.env
+import { config } from './config/config'
 
 const database_variable = (): Pool => {
-    if (ENV === 'dev') {
+    if (config.env === 'dev') {
         console.log("Run Dev db")    
     return new Pool({
-        host: process.env.POSTGRES_HOST,
-        database: process.env.POSTGRES_DB,
-        user: process.env.POSTGRES_USER,
-        password: process.env.POSTGRES_PASSWORD
+        host: config.host,
+        database: config.database,
+        user: config.username,
+        password: config.password
     })
     }
     else {
         console.log("Run Test By default")
         return new Pool({
-            host: process.env.POSTGRES_HOST,
-            database: process.env.POSTGRES_TEST_DB,
-            user: process.env.POSTGRES_USER,
-            password: process.env.POSTGRES_PASSWORD
+            host: config.host,
+            database: config.test,
+            user: config.username,
+            password: config.password
         })
     }
 }
