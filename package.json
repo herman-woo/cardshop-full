@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "frontend:install": "cd cardshop-app && npm install && npm install -g @angular/cli@latest",
-    "backend:install": "cd cardshop-api && npm install",
+    "backend:install": "cd cardshop-api && npm install && npm install typescript -g",
     "frontend:build": "cd cardshop-app && ng build",
     "backend:build": "cd cardshop-api && npm run build",
     "frontend:deploy": "cd cardshop-app && npm run deploy",
