@@ -8,6 +8,8 @@
     "backend:install": "cd cardshop-api && npm install && npm install typescript -g",
     "frontend:build": "cd cardshop-app && ng build",
     "backend:build": "cd cardshop-api && npm run build",
+    "frontend:test": "cd cardshop-app && npm run test",
+    "backend:test": "cd cardshop-api && npm run test",
     "frontend:deploy": "cd cardshop-app && npm run deploy",
     "backend:deploy": "cd cardshop-api && npm run deploy"
   },

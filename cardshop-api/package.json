@@ -9,7 +9,8 @@
     "refresh-test": "db-migrate --env test down && db-migrate --env test down && db-migrate --env test down && db-migrate --env test down && db-migrate --env test down",
     "test": "set ENV=test && db-migrate --env test up && jasmine-ts && npm run refresh-test",
     "set": "set process.env.ENV=test",
-    "deploy": "eb deploy",
+    "setenv": "",
+    "deploy": "npm run setenv && eb deploy",
     "start": "node build/server.js"
   },
   "repository": {
