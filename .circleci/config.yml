@@ -17,17 +17,14 @@ jobs:
       - eb/setup
       # install dependencies in both apps
       - run:
-          name: Set Back-End .env
-          command: |
-            cd cardshop-api && eb setenv NEW_VAR=$TEST_VAR       
-      - run:
           name: Front-End Install
           command: |
             npm run frontend:install
       - run:
           name: Back-End Install
           command: |
-            npm run backend:install            
+            npm run backend:install      
+      # Build Front and back end apps      
       - run:
           name: Front-End Build
           command: |
@@ -35,7 +32,8 @@ jobs:
       - run:
           name: Back-End Build
           command: |
-            npm run backend:build                 
+            npm run backend:build     
+     # deploy apps            
       - run:
           name: Front-End Deploy
           command: |
@@ -43,4 +41,8 @@ jobs:
       - run:
           name: Back-End Deploy
           command: |
-            npm run backend:deploy    
+            npm run backend:deploy
+      - run:
+          name: Set Back-End .env
+          command: |
+            cd cardshop-api && eb setenv POSTGRES_HOST=$POSTGRES_HOST POSTGRES_DB=$POSTGRES_DB POSTGRES_TEST_DB=$POSTGRES_TEST_DB POSTGRES_USER=$POSTGRES_USER POSTGRES_PASSWORD=$POSTGRES_PASSWORD BCRYPT_PASSWORD=$BCRYPT_PASSWORD SALT_ROUNDS=$SALT_ROUNDS TOKEN_SECRET=$TOKEN_SECRET ENV=$ENV                
